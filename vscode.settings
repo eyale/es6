@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "files.autoSave": "on",
+    "editor.fontFamily": "Menlo",
+    "editor.lineHeight": 17,
+    "explorer.openEditors.visible": 0
+}
