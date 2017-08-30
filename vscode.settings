@@ -8,3 +8,25 @@
     "editor.lineHeight": 17,
     "explorer.openEditors.visible": 0
 }
+
+
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "Dejavu sans mono",
+    "window.zoomLevel": 0,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "toggle",
+    "editor.renderWhitespace": "all",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 12,
+    "editor.tabSize": 2,
+    "files.autoSave": "onFocusChange",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.fontSize": 12,
+    "editor.lineHeight": 14,
+    "explorer.openEditors.visible": 0,
+    "material-icon-theme.showUpdateMessage": true,
+    "workbench.colorTheme": "Monokai"
+}
