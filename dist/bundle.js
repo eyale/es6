@@ -73,27 +73,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_png__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_png__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__image_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_xml__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_json__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__data_json__);
+
+
 
 
 
 
 function component() {
-    var element = document.createElement('div');
+  var element = document.createElement('div');
+
+  // Lodash, currently included via a script, is required for this line to work
+  element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
+  element.classList.add('hello')
+
+
+  var myIcon = new Image()
+  myIcon.src = __WEBPACK_IMPORTED_MODULE_2__image_png___default.a
+
+  element.appendChild(myIcon)
+
+  var paragraphJSON = document.createElement('p'),
+    nodeJSON = document.createTextNode(JSON.stringify(__WEBPACK_IMPORTED_MODULE_4__data_json___default.a)) 
+    
+  paragraphJSON.appendChild(nodeJSON)
+
   
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello')
-
-
-    var myIcon = new Image()
-    myIcon.src = __WEBPACK_IMPORTED_MODULE_2__image_png___default.a
-
-    element.appendChild(myIcon)
   
-    return element;
-  }
+  console.log(__WEBPACK_IMPORTED_MODULE_3__data_xml___default.a)
+  element.appendChild(paragraphJSON)
+
+  return element;
+}
   
   document.body.appendChild(component());
 
@@ -17259,7 +17275,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, options);
+var update = __webpack_require__(9)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -17284,7 +17300,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, ".hello {\n    color: red;\n    background: url(" + __webpack_require__(7) + ") center 0 no-repeat;\n    background-size: contain;\n}", ""]);
+exports.push([module.i, "@font-face {\n    font-family: 'Roboto Mono';\n    src: url(" + __webpack_require__(7) + ");\n}\n\n* {\n    font-family: 'Roboto Mono';\n}\n\n.hello {\n    color: deeppink;\n    background: url(" + __webpack_require__(8) + ") center 0 no-repeat;\n    background-size: contain;\n}", ""]);
 
 // exports
 
@@ -17375,10 +17391,16 @@ function toComment(sourceMap) {
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "6bc5d8cf78d442a984e70195db059b69.svg";
+module.exports = __webpack_require__.p + "b82d827ba127c43e9272942682b88dc3.ttf";
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "6bc5d8cf78d442a984e70195db059b69.svg";
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -17424,7 +17446,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(10);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -17737,7 +17759,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 
@@ -17832,10 +17854,22 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "15515f82a9586928fd9c2c4e8b22490f.png";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = {"note":{"to":["Mary"],"from":["John"],"heading":["Reminder"],"body":["Call Cindy on Tuesday"]}}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+module.exports = {"test":"JSON_TEST"}
 
 /***/ })
 /******/ ]);

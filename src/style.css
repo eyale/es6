@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('./RobotoMono-Light.ttf');
+}
+
+* {
+    font-family: 'Roboto Mono';
+}
+
 .hello {
-    color: red;
+    color: deeppink;
     background: url('./logo.svg') center 0 no-repeat;
     background-size: contain;
 }
