@@ -1,3 +1,4 @@
 export default function printMe () {
-    consolee.log('I get called from print.js!')
+    console.log('I get called from print.js!')
+    console.info('webpack watch is running')
 }
