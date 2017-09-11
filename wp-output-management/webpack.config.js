@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // replace index.html
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -25,7 +26,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        ie8: false,
+        ecma: 8,
+        output: {
+          comments: false,
+          beautify: false,
+        },
+        warnings: false
+      }
+    })
   ],
   output: {
     filename: '[name]bundle.js',
