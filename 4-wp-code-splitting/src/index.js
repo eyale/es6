@@ -21,7 +21,6 @@ function component() {
   element.appendChild(btn)
   element.appendChild(codeElement)
 
-  console.log('check')
   return element;
 }
   var element = component()
