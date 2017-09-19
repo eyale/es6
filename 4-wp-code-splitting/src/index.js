@@ -25,7 +25,7 @@ function component() {
 }
   var element = component()
   document.body.appendChild(component());
-
+  
 if (module.hot) {
   module.hot.accept('./another_module.js', function() {
     console.log('Accepting the updated `another_module.js` module!');

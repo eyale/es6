@@ -27,6 +27,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common'
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new UglifyJSPlugin({
       uglifyOptions: {
