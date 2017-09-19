@@ -6,8 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-    another: './src/another_module.js'
+    app: './src/index.js'
   },
   devtool:'inline-source-map',
   devServer: {
@@ -27,9 +26,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Code Splitting'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common'
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new UglifyJSPlugin({
       uglifyOptions: {
@@ -45,7 +41,6 @@ module.exports = {
   ],
   output: {
     filename: '[name]bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dist')
   },
 };
